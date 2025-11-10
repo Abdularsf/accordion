@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import  faq  from "../API/faq.json"
+import { FAQ } from "./UI/FAQ";
 
 export const Accordion = () => {
     const [data, setData] = useState([]);
@@ -13,14 +14,7 @@ export const Accordion = () => {
             <ul className="section-accordion">
                 {
                     data.map((curElem) =>{
-                        return(
-                            <li>
-                                <div className="accordion-grid">
-                                    <p>{curElem.question}</p>
-                                    <button>Show</button>
-                                </div>
-                            </li>
-                        )
+                        return <FAQ key = {curElem.id} curData = {curElem}/>
                     })
                 }
             </ul>
