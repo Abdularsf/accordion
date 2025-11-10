@@ -1,16 +1,27 @@
-# React + Vite
+# 🪗 React Accordion (FAQ Component)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **Accordion / FAQ component** built using **React.js**.  
+It dynamically displays questions and answers from a local JSON file, allowing users to toggle each section open or closed.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 📂 Data-driven — questions and answers imported from a local `faq.json` file  
+- ⚛️ Built with **React functional components**  
+- 🪝 Uses **useState** and **useEffect** hooks for dynamic rendering  
+- 🔁 Toggle functionality — click to open or close answers  
+- 💅 Clean and responsive UI styled with CSS  
+- 🧱 Component-based structure (`Accordion` and `FAQ` components)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 How It Works
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- The `Accordion` component fetches data from `faq.json` using the `useEffect` hook.  
+- It maps each FAQ item into a reusable `FAQ` component.  
+- Each `FAQ` component receives:
+  - `curData` → current FAQ object (question & answer)
+  - `isActive` → controls open/close state
+  - `onToggle` → toggles visibility of the answer  
+- Only one question can be open at a time for a clean user experience.
