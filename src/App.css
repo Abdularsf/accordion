@@ -1,8 +1,11 @@
 body {
-  display: flex;
-  justify-content: center; 
-  align-items: flex-start;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;       /* Centers vertically */
+  /* height: 100vh;         */
   background-color: #17202a;
+}
+#root {
+  width: 100%;
 }
 
 html {
